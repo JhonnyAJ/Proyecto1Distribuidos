@@ -1,0 +1,28 @@
+<h4 style="margin-top: 15px">{{ ciudad }}</h4>
+
+<h5>City's details</h5>
+<form>
+  <div class="row">
+    <div class="six columns">
+       <label for="idInput">ID</label>
+       <input class="u-full-width" id="_id" type="text" value="{{ _id }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="countryInput">Country</label>
+       <input class="u-full-width" id="country" type="text" value="{{ country }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for="foundedInput">Founded</label>
+       <input class="u-full-width" id="founded" type="text" value="{{ founded }}"  readonly/>
+    </div>
+  </div>
+</form>
+
+<h5>Buildings</h5>
+<ul>
+{{#edificios}}
+  <li><a href="https://edificios-minisite.netlify.app/get?id={{edificio_id}}">{{title}}</li>
+{{/edificios}}
+</ul>
